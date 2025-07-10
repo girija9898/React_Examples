@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 /* This will load the Text Component after loading all the other js/jsx files to optimize performance
   This we can observe by changing the throttling in browser to slow network
   Until the Text Component has loaded, we can add a fallback code in the Suspense component to display in place of the Text Component. Wrap the TextComponent in React.Suspense.
@@ -16,9 +16,9 @@ function App() {
   const decrementHandler = () => {
     setCount(prev => prev - 1);
   }
-  const textChanged = (e) => {
+  const textChanged = useCallback((e) => {
     setText(e.target.value);
-  }
+  }, [])
 
   return ( 
     <center>
@@ -36,4 +36,3 @@ function App() {
 }
 
 export default App;
-

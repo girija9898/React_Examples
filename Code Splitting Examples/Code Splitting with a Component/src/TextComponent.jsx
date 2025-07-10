@@ -1,11 +1,13 @@
+import React from "react";
 
-
-export default function TextComponent ( {text, textChanged} ) {
+function TextComponent ( {text, textChanged} ) {
     return (
-
         <>
+            {console.log("TextComponent rendered")}
             <input type="text" onChange={textChanged} />
             <h3>Text: {text} </h3>
         </>
     )
 }
+
+export default React.memo(TextComponent);
