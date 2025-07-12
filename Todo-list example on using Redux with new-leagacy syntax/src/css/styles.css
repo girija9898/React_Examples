@@ -1,0 +1,13 @@
+.todo-list {
+    list-style: none;
+}
+.todo-list li {
+    padding: 10px;
+}
+.filters-list {
+    margin-top: 20px;
+}
+.filters-list a {
+    padding: 10px;
+    text-decoration: none;
+}
